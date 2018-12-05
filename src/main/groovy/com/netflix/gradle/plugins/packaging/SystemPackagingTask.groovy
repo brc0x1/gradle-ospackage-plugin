@@ -204,6 +204,10 @@ public abstract class SystemPackagingTask extends AbstractArchiveTask {
         return getArchStr()?.toLowerCase();
     }
 
+    public String getOsString() {
+        return osName ? osName.toLowerCase() : (os?.toString()?.toLowerCase() ?: '');
+    }
+
     @Override
     public AbstractCopyTask from(Object sourcePath, Closure c) {
         use(CopySpecEnhancement) {

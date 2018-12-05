@@ -99,6 +99,9 @@ class SystemPackagingExtension {
     Os os
 
     @Input @Optional
+    String osName
+
+    @Input @Optional
     RpmType type
 
     List<String> prefixes = new ArrayList<String>()
